@@ -1,0 +1,23 @@
+# AWS Deployment files that might contain sensitive data
+# Note: deploy-config.env is safe to commit as it doesn't contain credentials
+# However, if you add actual secrets, uncomment the line below:
+# deploy-config.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp
+.cache/
