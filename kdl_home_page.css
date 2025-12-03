@@ -104,3 +104,40 @@ img {
   margin: 0;
   max-width: none;
 }
+
+/* Social link styles */
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  text-decoration: none;
+  color: #0a2342;
+  font-weight: bold;
+}
+.social-link:hover .social-text {
+  text-decoration: underline;
+}
+.facebook-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+}
+.social-text {
+  color: maroon;
+  font-size: 1em;
+}
+
+/* Footer styles */
+.site-footer {
+  background: teal;
+  color: #fff;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  text-align: center;
+}
+.site-footer .social-link {
+  color: #fff;
+}
+.site-footer .facebook-icon path {
+  fill: #fff;
+}
