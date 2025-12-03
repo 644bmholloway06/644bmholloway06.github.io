@@ -192,8 +192,7 @@ def upload_website_files(s3_client):
                 BUCKET_NAME,
                 s3_key,
                 ExtraArgs={
-                    'ContentType': content_type,
-                    'ACL': 'public-read'
+                    'ContentType': content_type
                 }
             )
             print(f"✓ Uploaded: {s3_key}")
