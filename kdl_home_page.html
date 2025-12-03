@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KDL Services</title>
+    <meta name="description" content="Phoenix-based plumbing services company">
+    <meta name="author" content="Brad Holloway">
+    <link rel="stylesheet" href="kdl_home_page.css">
+</head>
+<body>
+        <div class="img-flex">
+  <img src="KDL Services Logo.png" alt="KDL Service Logo">
+  <!-- Add more images or elements here if needed -->
+</div>
+        <div class="main-flex">
+            <div class="info-block">
+                <p>Welcome to KDL Services, your trusted plumbing solutions provider in Phoenix.</p>
+                <p>Our team of experienced plumbers is dedicated to providing top-notch service and solutions for all your plumbing needs.</p>
+                <p>Contact us today for reliable and efficient plumbing services.</p>
+                <p>Phone: (623) 451-5165</p>
+            </div>
+            <div class="form-block">
+                <h2>Request a Callback</h2>
+                <form class="callback-form" id="callbackForm">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+                    <label for="phone">Phone:</label><br>
+                    <input type="tel" id="phone" name="phone" required><br><br>
+                    <label for="email">Email (optional):</label><br>
+                    <input type="email" id="email" name="email"><br><br>
+                    <label for="message">How can we help?</label><br>
+                    <textarea id="message" name="message" rows="3"></textarea><br><br>
+                    <button type="submit">Request Callback</button>
+                </form>
+            </div>
+        </div>
+            <script>
+                document.getElementById('callbackForm').addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    const data = {
+                        name: document.getElementById('name').value,
+                        phone: document.getElementById('phone').value,
+                        email: document.getElementById('email').value,
+                        message: document.getElementById('message').value
+                    };
+                    try {
+                        const res = await fetch('https://your-backend-endpoint.com/api/callback', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(data)
+                        });
+                        if (res.ok) {
+                            alert('Thank you! Your request has been submitted.');
+                            document.getElementById('callbackForm').reset();
+                        } else {
+                            alert('There was a problem submitting your request.');
+                        }
+                    } catch (err) {
+                        alert('Network error. Please try again later.');
+                    }
+                });
+            </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+/* Main flex container for info and form */
+.main-flex {
+  display: flex;
+  gap: 2em;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 2em auto;
+  max-width: 900px;
+}
+.info-block {
+  flex: 1 1 300px;
+}
+.form-block {
+  flex: 1 1 350px;
+}
+@media (max-width: 800px) {
+  .main-flex {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* Callback form styling */
+.callback-form {
+  background: #fffbe6;
+  border: 2px solid #b91c1c;
+  border-radius: 0.5em;
+  padding: 2em;
+  max-width: 400px;
+  margin: 2em auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.callback-form label {
+  font-weight: bold;
+  color: #0a2342;
+}
+.callback-form input,
+.callback-form textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.2em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 0.3em;
+  font-size: 1em;
+}
+.callback-form button {
+  background: #b91c1c;
+  color: #fff;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.7em 1.5em;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.callback-form button:hover {
+  background: #7f1d1d;
+}
+/* Flex container for header */
+.header-flex {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  margin-bottom: 2em;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: gold;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+h1 {
+  color: #fff;
+  background: #0a2342;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  text-align: center;
+}
+
+p {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  color: maroon;
+}
+
+img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  margin: 0;
+  max-width: none;
+}
