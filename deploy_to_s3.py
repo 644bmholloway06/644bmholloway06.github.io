@@ -17,7 +17,7 @@ from botocore.exceptions import ClientError
 
 # Configuration
 BUCKET_NAME = "kdl-services-website"  # Change this to your preferred bucket name (must be globally unique)
-REGION = "us-east-1"  # Change if needed
+REGION = "us-west-2"  # US West (Oregon)
 IAM_USER_NAME = "kdl-s3-deployer"
 WEBSITE_DIR = os.path.dirname(os.path.abspath(__file__))  # Current directory
 
